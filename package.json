@@ -2,7 +2,7 @@
   "name": "food-data",
   "version": "0.0.1",
   "scripts": {
-    "start": "npm run dev",
+    "start": "npm run dev -- --port=3001",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
@@ -20,6 +20,7 @@
     "autoprefixer": "^10.4.2",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "postcss-jit-props": "^1.0.4",
     "postcss-preset-env": "^7.4.1",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
