@@ -1,0 +1,12 @@
+@import "open-props/postcss/style";
+@import "open-props/postcss/normalize";
+
+body {
+  background-color: var(--red-8);
+}
+
+@media screen and (--sm-n-above) {
+  body {
+    background-color: var(--blue-8);
+  }
+}
