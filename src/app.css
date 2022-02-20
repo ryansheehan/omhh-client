@@ -1,12 +1,49 @@
 @import "open-props/postcss/style";
 @import "open-props/postcss/normalize";
 
-body {
-  background-color: var(--red-8);
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media screen and (--sm-n-above) {
-  body {
-    background-color: var(--blue-8);
-  }
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: var(--font-lineheight-3);
+  -webkit-font-smoothing: antialiased;
+}
+
+#svelte, #modal {
+  isolation: isolate;
+}
+
+#modal {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+:root {
+
 }
