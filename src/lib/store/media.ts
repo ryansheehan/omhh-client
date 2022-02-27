@@ -1,10 +1,10 @@
 import { writable } from 'svelte/store';
-
-const isWindowDefined = typeof window !== 'undefined';
+import type { Writable } from 'svelte/store';
+import { browser } from '$app/env';
 
 function createMediaStore(query: string) {
-  const store = writable(false, set => {
-    if (isWindowDefined) {
+  const store: Writable<boolean> = writable<boolean>(false, set => {
+    if (browser) {
       const {set: setValue} = store;
       const mql = window.matchMedia(query);
       set(mql.matches);

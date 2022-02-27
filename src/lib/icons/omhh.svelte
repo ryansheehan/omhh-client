@@ -1,12 +1,11 @@
 <script lang="ts">
-  export let color: string = 'currentColor';
-  export let height: string = '100%';
+  export let color: string = 'currentColor';  
 </script>
+
 <svg
   xmlns="http://www.w3.org/2000/svg"   
-  viewBox="0 0 98 30"
-  height={height}
-  fill={color}
+  viewBox="0 0 98 30"  
+  fill={color}  
   version="1.1">
   <g>
     <g style="stroke-width:0.264583">
@@ -85,3 +84,9 @@
     </g>
   </g>
 </svg>
+
+<style lang="postcss">
+  svg {
+    height: 100%;
+  }
+</style>

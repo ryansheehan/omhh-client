@@ -3,6 +3,7 @@
   import { fade } from 'svelte/transition';
   import Portal from 'svelte-portal/src/Portal.svelte';
   import { modal } from '$lib/store/modal';
+  import { focusTrap } from 'svelte-focus-trap';
 
   let bodyElement: HTMLElement | undefined = undefined;  
 
@@ -45,7 +46,7 @@
 
 <Portal target="#modal">
   <div class="backdrop" on:click={modal.close} transition:fade={{duration: 150}}/>
-  <div class="content-wrapper">    
+  <div class="content-wrapper" use:focusTrap>    
     <svelte:component this={$modal.component} {...$modal.data} />
   </div>
 </Portal>
