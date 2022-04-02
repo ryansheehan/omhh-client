@@ -1,12 +1,18 @@
 {
   "cssvar.files": [
     "./node_modules/open-props/open-props.min.css",
-    "./src/app.css"
+    "src/app.css"
   ],
   "cssvar.extensions": [
-    "postcss", "pcss"
+    "postcss", "pcss", "svelte"
   ],
   "cSpell.words": [
     "pcss"
+  ],
+  "cssvar.postcssPlugins": [
+    "nesting-rules",
+    "custom-properties",
+    "gap-properties",
+    "not-pseudo-class",
   ]
 }
