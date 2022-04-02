@@ -14,7 +14,7 @@
   }
 
   a, a:hover, a:visited, a:active {
-    color: var(--gray-9)
+    color: var(--text-1);
   }
 
   a:hover {

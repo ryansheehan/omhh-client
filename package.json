@@ -2,7 +2,7 @@
   "name": "food-data",
   "version": "0.0.1",
   "scripts": {
-    "start": "npm run dev -- --port=3001",
+    "start": "npm run dev -- --port=3000 --host",
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",

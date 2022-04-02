@@ -1,10 +1,10 @@
 <script lang="ts">
   import Footer from './footer.svelte';
-  import Nav from './nav.svelte';
+  import Banner from './banner/banner.svelte';
 </script>
 
 <div class="page-wrapper">
-  <Nav />
+  <Banner />
   <main>
     <slot />
   </main>
@@ -20,5 +20,7 @@
 
   main {
     flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
   }
 </style>

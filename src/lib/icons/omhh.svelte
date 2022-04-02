@@ -4,7 +4,7 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"   
-  viewBox="0 0 98 30"  
+  viewBox="0 0 98 30"    
   fill={color}  
   version="1.1">
   <g>

@@ -1,4 +1,11 @@
 {
+  "cssvar.files": [
+    "./node_modules/open-props/open-props.min.css",
+    "./src/app.css"
+  ],
+  "cssvar.extensions": [
+    "postcss", "pcss"
+  ],
   "cSpell.words": [
     "pcss"
   ]
