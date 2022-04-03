@@ -4,5 +4,10 @@
 </footer>
 
 <style lang="postcss">
-  
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-block: var(--size-2);
+  }
 </style>
