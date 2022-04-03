@@ -1,81 +1,24 @@
 <div class="container">
   <div class="block red"></div>
-  <div class="block pink"></div>
-  <div class="block grape"></div>
-  <div class="block violet"></div>
-  <div class="block indigo"></div>
-  <div class="block blue"></div>
-  <div class="block cyan"></div>
-  <div class="block teal"></div>
   <div class="block green"></div>
-  <div class="block lime"></div>
-  <div class="block yellow"></div>
-  <div class="block orange"></div>
-  <div class="block red"></div>
-  <div class="block pink"></div>
-  <div class="block grape"></div>
-  <div class="block violet"></div>
-  <div class="block indigo"></div>
-  <div class="block blue"></div>
-  <div class="block cyan"></div>
-  <div class="block teal"></div>
-  <div class="block green"></div>
-  <div class="block lime"></div>
-  <div class="block yellow"></div>
-  <div class="block orange"></div>
-  <div class="block red"></div>
-  <div class="block pink"></div>
-  <div class="block grape"></div>
-  <div class="block violet"></div>
-  <div class="block indigo"></div>
-  <div class="block blue"></div>
-  <div class="block cyan"></div>
-  <div class="block teal"></div>
-  <div class="block green"></div>
-  <div class="block lime"></div>
-  <div class="block yellow"></div>
-  <div class="block orange"></div>
-  <div class="block red"></div>
-  <div class="block pink"></div>
-  <div class="block grape"></div>
-  <div class="block violet"></div>
-  <div class="block indigo"></div>
-  <div class="block blue"></div>
-  <div class="block cyan"></div>
-  <div class="block teal"></div>
-  <div class="block green"></div>
-  <div class="block lime"></div>
-  <div class="block yellow"></div>
-  <div class="block orange"></div>
-  <div class="block red"></div>
-  <div class="block pink"></div>
-  <div class="block grape"></div>
-  <div class="block violet"></div>
-  <div class="block indigo"></div>
-  <div class="block blue"></div>
-  <div class="block cyan"></div>
-  <div class="block teal"></div>
-  <div class="block green"></div>
-  <div class="block lime"></div>
-  <div class="block yellow"></div>
-  <div class="block orange"></div>
 </div>
 
 <style lang="postcss">
   .container {
-    margin-top: var(--size-4);
+    flex: 1 1 auto;    
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 8px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0px;
     background-color: var(--surface-1);
+    position: relative;
   }
 
   .block {
-    --size: 64px;
-    width: var(--size);
-    height: var(--size);
-    background-color: var(--gray-7);
+    width: 100%;
+    background-color: var(--surface-4);
+    border: 1px solid var(--gray-9);    
   }
   
   .red {
@@ -113,5 +56,21 @@
   }
   .orange {
     background-color: var(--orange-7)
+  }
+
+  .surface-1 {
+    background-color: var(--surface-1);
+  }
+
+  .surface-2 {
+    background-color: var(--surface-2);
+  }
+
+  .surface-3 {
+    background-color: var(--surface-3);
+  }
+
+  .surface-4 {
+    background-color: var(--surface-4);
   }
 </style>

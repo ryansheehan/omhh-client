@@ -11,6 +11,8 @@
     height: var(--height); 
     width: fit-content; 
     text-decoration: none; 
+    min-width: 104px;
+    text-align: center;
   }
 
   a, a:hover, a:visited, a:active {

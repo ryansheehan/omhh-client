@@ -15,8 +15,6 @@ import type {
   StepReference,
 } from './models';
 
-export type {SanityImageSource} from '@sanity/image-url/lib/types/types';
-export * from './models';
 
 const projectId = (import.meta.env.VITE_PUBLIC_SANITY_PROJECT_ID ?? 'no-project-id') as string;
 const dataset = (import.meta.env.VITE_PUBLIC_SANITY_DATASET ?? 'development') as string;

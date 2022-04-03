@@ -1,46 +1,36 @@
-<p>lorem ipsum</p>
-<br/>
-<div class="container">
-  <div class="block"></div>
-  <div class="block"></div>
-  <div class="block"></div>
-  <div class="block"></div>
-</div>
+<script lang="ts" context="module">
+  import type { Load } from '@sveltejs/kit';
+  import { 
+    getLandingPage, 
+    type PostRecipeListing, 
+    type TagListing, 
+    type Contributor
+  } from '$lib/api/sanity';
+
+  export const load: Load = async ({ fetch }) => {
+    const data = await getLandingPage(fetch);
+
+    return {
+      props: {
+        ...data
+      }
+    }
+  }
+</script>
+
+<script lang="ts">
+  export let latestRecipes: PostRecipeListing[];
+  export let latestPosts: PostRecipeListing[];
+  export let categories: TagListing[];
+  export let seasons: TagListing[];
+  export let occasions: TagListing[];
+  export let cuisines: TagListing[];
+  export let diets: TagListing[];
+  export let about: Contributor;
+</script>
+
+<pre>{JSON.stringify(latestRecipes, undefined, 2)}</pre>
 
 <style lang="postcss">
-  p {
-    color: var(--red-5);
-  }
-
-  .container {
-    --size: 100%;
-    --gap:4px;   
-    flex: 1 1 auto;     
-    width: var(--size);    
-    background-color: var(--gray-9);
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
-    gap: var(--gap);
-  }
-
-  .block {    
-    width: 100%;    
-  }
-
-  .block:nth-child(1) {
-    background-color: var(--red-5);
-  }
-
-  .block:nth-child(2) {
-    background-color: var(--orange-5);
-  }
-
-  .block:nth-child(3) {
-    background-color: var(--green-5);
-  }
-
-  .block:nth-child(4) {
-    background-color: var(--blue-5);
-  }
+  
 </style>
