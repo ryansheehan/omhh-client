@@ -49,7 +49,9 @@ html, body {
 }
 
 :root {
-
+  --font-sans: Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  --font-serif: Gentium Basic,ui-serif,serif;
+  --font-mono: Dank Mono,Operator Mono,Inconsolata,Fira Mono,ui-monospace,SF Mono,Monaco,Droid Sans Mono,Source Code Pro,monospace;
 }
 
 .visually-hidden {
@@ -62,3 +64,8 @@ html, body {
   padding: 0;
   border: 0;
 }
+
+h1,h2,h3 {
+  font-family: var(--font-serif);
+}
+
