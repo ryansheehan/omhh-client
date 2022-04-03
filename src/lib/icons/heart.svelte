@@ -4,7 +4,12 @@
   export let verticalAlign: string = 'baseline';
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.72537 107.71496" width={width} style="--vertical-align: {verticalAlign}">
+<svg xmlns="http://www.w3.org/2000/svg" 
+  aria-hidden="true" 
+  focusable="false"
+  viewBox="0 0 122.72537 107.71496" 
+  width={width} 
+  style="--vertical-align: {verticalAlign}">
   <g transform="translate(-42.013689,-73.969755)">
     <path 
       transform="scale(0.26458333)"

@@ -4,9 +4,10 @@
   export let verticalAlign: string = "text-top"; 
 </script>
 
-<svg 
-  xmlns="http://www.w3.org/2000/svg" 
+<svg xmlns="http://www.w3.org/2000/svg" 
   xmlns:xlink="http://www.w3.org/1999/xlink"
+  aria-hidden="true" 
+  focusable="false"
   viewBox="40 20 84 124"
   version="1.1"
   style="--vertical-align: {verticalAlign};"

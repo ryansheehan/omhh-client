@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
-  import Link from './link.svelte';
+  import Link from './banner/link.svelte';
 </script>
 
 <nav aria-label="side navigation" transition:fly={{x: -16*14, duration: 300}}>

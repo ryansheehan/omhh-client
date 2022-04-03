@@ -1,12 +1,12 @@
 <script lang="ts">
-  import VisuallyHidden from '$lib/visually-hidden.svelte';
-  
+  import VisuallyHidden from "$lib/visually-hidden.svelte";
   export let onClick: () => void;  
+  export let label: string;
 </script>
 
 <button on:click={onClick}>
-  <slot/>
-  <VisuallyHidden><slot name="visually-hidden"/></VisuallyHidden>
+  <VisuallyHidden>{label}</VisuallyHidden>
+  <slot/>  
 </button>
 
 <style lang="postcss">

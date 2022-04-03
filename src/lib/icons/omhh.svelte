@@ -2,8 +2,9 @@
   export let color: string = 'currentColor';  
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"   
+<svg xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true" 
+  focusable="false"
   viewBox="0 0 98 30"    
   fill={color}  
   version="1.1">

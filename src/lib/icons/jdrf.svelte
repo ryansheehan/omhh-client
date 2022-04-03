@@ -1,5 +1,6 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true" 
+  focusable="false"
   class="spirit-icon spirit-icon--jdrf"
   viewBox="0 0 116 31.93"  
   stroke-width="0"

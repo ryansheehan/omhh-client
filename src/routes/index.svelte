@@ -2,34 +2,40 @@
   import type { Load } from '@sveltejs/kit';
   import { 
     getLandingPage, 
-    type PostRecipeListing, 
-    type TagListing, 
-    type Contributor
+    type LandingData,
   } from '$lib/api/sanity';
 
   export const load: Load = async ({ fetch }) => {
-    const data = await getLandingPage(fetch);
+    const pageData = await getLandingPage(fetch);
 
     return {
       props: {
-        ...data
+        pageData
       }
     }
   }
 </script>
 
 <script lang="ts">
-  export let latestRecipes: PostRecipeListing[];
-  export let latestPosts: PostRecipeListing[];
-  export let categories: TagListing[];
-  export let seasons: TagListing[];
-  export let occasions: TagListing[];
-  export let cuisines: TagListing[];
-  export let diets: TagListing[];
-  export let about: Contributor;
+  import Section from '$lib/layout/section.svelte';
+
+  export let pageData: LandingData;
+
+  const {latestRecipes} = pageData;
+  const [latestRecipe, ...recentRecipes] = latestRecipes;
 </script>
 
-<pre>{JSON.stringify(latestRecipes, undefined, 2)}</pre>
+<svelte:head>
+  <title>Oh My Heart and Home</title>
+</svelte:head>
+
+<Section>
+  
+</Section>
+
+<Section surface="2">
+  <pre>{JSON.stringify(latestRecipes, undefined, 2)}</pre>
+</Section>
 
 <style lang="postcss">
   

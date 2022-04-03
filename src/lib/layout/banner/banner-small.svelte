@@ -1,18 +1,13 @@
 <script lang="ts">
-  import OmhhLogo from '$lib/icons/omhh.svelte';
-  import Link from '../link.svelte';
-  import MenuButton from '../menu-button.svelte';
-  import SearchButton from '../search-button.svelte';
-
-  const buttonWidth = 'var(--size-7)';
+  import Headline from './headline.svelte';  
+  import MenuButton from './menu-button.svelte';
+  import SearchButton from './search-button.svelte';  
 </script>
 
 <div class="banner-small">
   <MenuButton/>
   <div class="center">
-    <Link href="/" height="100%">
-      <OmhhLogo />
-    </Link>
+    <Headline/>
   </div>
   <SearchButton/>
 </div>

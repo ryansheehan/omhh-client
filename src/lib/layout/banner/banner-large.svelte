@@ -1,15 +1,13 @@
 <script lang="ts">
-  import OmhhLogo from '$lib/icons/omhh.svelte';
-  import Link from '../link.svelte';
+  import Headline from './headline.svelte';
+  import Link from './link.svelte';
 </script>
 
 <nav class="banner-large" aria-label="main navigation">
   <Link href="#"><h2>Recipes</h2></Link>
   <Link href="#"><h2>Lifestyle</h2></Link>
   <div class="center">
-    <Link href="/" height="100%">
-      <OmhhLogo />
-    </Link>
+    <Headline />
   </div>
   <Link href="#"><h2>Shop</h2></Link>
   <Link href="#"><h2>About</h2></Link>
