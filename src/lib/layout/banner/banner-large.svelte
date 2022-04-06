@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Headline from './headline.svelte';
+  import OmhhHome from './omhh-home-link.svelte';
   import Link from './link.svelte';
 </script>
 
@@ -7,7 +7,7 @@
   <Link href="#"><span class="nav-item">Recipes</span></Link>
   <Link href="#"><span class="nav-item">Lifestyle</span></Link>
   <div class="center">
-    <Headline />
+    <OmhhHome />
   </div>
   <Link href="#"><span class="nav-item">Shop</span></Link>
   <Link href="#"><span class="nav-item">About</span></Link>
@@ -16,12 +16,14 @@
 <style lang="postcss">
   .banner-large {
     display: none;
+    max-width: var(--size-xl);
+    margin-inline: auto;
   }
 
   .center {
     margin-inline: 0; 
     height: var(--size-10);
-    width: fit-content;  
+    width: fit-content;    
   }
 
   .nav-item {

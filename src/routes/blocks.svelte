@@ -1,5 +1,6 @@
 <script lang="ts">
   import Block, {randomColors} from './_block.svelte';
+  import Section from '$lib/components/section.svelte';
   export let count = 400;
   const colors = randomColors(count);
   const size = 128;
@@ -7,11 +8,13 @@
   const height = size;
 </script>
 
-<div class="container">
-  {#each colors as color, i (i)}
-    <Block {color} {width} {height} />
-  {/each}
-</div>
+<Section>
+  <div class="container">
+    {#each colors as color, i (i)}
+      <Block {color} {width} {height} />
+    {/each}
+  </div>
+</Section>
 
 <style lang="postcss">
   .container {

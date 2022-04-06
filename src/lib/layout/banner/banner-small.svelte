@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Headline from './headline.svelte';  
+  import OmhhHome from './omhh-home-link.svelte';  
   import MenuButton from './menu-button.svelte';
   import SearchButton from './search-button.svelte';  
 </script>
@@ -7,7 +7,7 @@
 <div class="banner-small">
   <MenuButton/>
   <div class="center">
-    <Headline/>
+    <OmhhHome/>
   </div>
   <SearchButton/>
 </div>
