@@ -17,7 +17,8 @@
 </script>
 
 <script lang="ts">
-  import Section from '$lib/layout/section.svelte';
+  import Section from '$lib/components/section.svelte';
+  import HeartWrapper from '$lib/components/heart-wrapper.svelte';
 
   export let pageData: LandingData;
 
@@ -26,17 +27,22 @@
 </script>
 
 <svelte:head>
-  <title>Oh My Heart and Home</title>
+  <title>Oh My Heart and Home</title>   
+  <meta name="description" content="Find homemade vegetarian and vegan recipes with nutritial information. Discover the products that we use to make the recipes. Learn about cooking."> 
 </svelte:head>
 
 <Section>
-  
+  <HeartWrapper><h2>Taste the latest</h2></HeartWrapper>
 </Section>
 
 <Section surface="2">
-  <pre>{JSON.stringify(latestRecipes, undefined, 2)}</pre>
+  
 </Section>
 
 <style lang="postcss">
-  
+  h2 {
+    color: var(--text-2);
+    text-transform: uppercase;
+    font-size: var(--font-size-fluid-1);
+  }
 </style>

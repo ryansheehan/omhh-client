@@ -5,6 +5,12 @@
   import Page from '$lib/layout/page.svelte';
 </script>
 
+<svelte:head>  
+  <link rel="canonical" href={`${import.meta.env.VITE_BASE_URL}`}>
+  <meta name="theme-color" content="#FFFFFF">  
+  <title>Oh My Heart and Home</title>
+</svelte:head>
+
 <Page>
   <slot />
 </Page>

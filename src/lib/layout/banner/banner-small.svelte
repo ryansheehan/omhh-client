@@ -14,19 +14,20 @@
 
 <style lang="postcss">
   .banner-small {
-    height: var(--size-9);
+    height: 100%;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    padding: 0 var(--size-3);
+    align-items: center;    
+    padding-block: var(--size-2);
+    padding-inline: var(--size-4);
 
     --menu-button-width: var(--size-7);
   }
 
   .center {
     margin-inline: auto;  
-    height: 100%;
-    width: fit-content;  
+    height: var(--size-10);
+    width: fit-content;      
   } 
 
   @media screen and (--md-n-above) {

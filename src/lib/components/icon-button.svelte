@@ -4,7 +4,7 @@
   export let label: string;
 </script>
 
-<button on:click={onClick}>
+<button on:click={onClick} type="button">
   <VisuallyHidden>{label}</VisuallyHidden>
   <slot/>  
 </button>
