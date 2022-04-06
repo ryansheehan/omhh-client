@@ -14,11 +14,9 @@
 
 <style lang="postcss">
   section {
-    background-color: var(--surface);
-    padding-inline: var(--size-3);
-    padding-block: var(--size-3);
-    min-inline-size: 100%;
-    min-block-size: var(--size-15);
+    background-color: var(--surface);    
+    padding-block: var(--size-4);
+    min-inline-size: 100%;    
   }
 
   .content {
