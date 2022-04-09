@@ -31,17 +31,23 @@ body {
 }
 
 html, body {
-  min-height: 100%;
   padding: 0;
+  height: 100%;
 }
 
-body {
+body {  
   overflow: scroll;
 }
 
-#svelte, #modal {
+#svelte, #modal {  
   isolation: isolate;   
   height: auto;  
+}
+
+#svelte {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 #modal {

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "../app.css";
+  // import "../app.css";
   import { modal } from '$lib/store/modal';
   import Modal from '$lib/modal.svelte';
   import Page from '$lib/layout/page.svelte';
@@ -20,4 +20,5 @@
 {/if}
 
 <style lang="postcss">
+  @import "../app.css";
 </style>

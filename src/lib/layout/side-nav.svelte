@@ -14,7 +14,7 @@
     gap: var(--size-2);
     color: var(--text-1);
     background-color: var(--surface-2);
-    width: var(--size-14);
+    width: min(var(--size-14), 80vw);
     height: 100%;
   }
 </style>

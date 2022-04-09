@@ -7,7 +7,7 @@ const config = {
   plugins: [
     postcssJitProps(OpenProps),
     autoprefixer(),
-    presetEnv({
+    presetEnv({      
       'nesting-rules': true,
       'custom-properties': true,
       'gap-properties': true,
