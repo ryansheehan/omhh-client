@@ -48,6 +48,7 @@ export async function getLandingPage(fetch: Fetch) {
       _id,
       name,
       mainImage,
+      description,
       'slug': slug.current,
     },
     'latestPosts': *[_type=='post' && defined(publishedAt)] | order(publishedAt desc)[0...5] {

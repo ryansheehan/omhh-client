@@ -16,7 +16,7 @@
 <style lang="postcss">
   .banner-large {
     display: none;
-    max-width: var(--size-xl);
+    max-width: var(--size-lg);
     margin-inline: auto;
   }
 
@@ -35,7 +35,7 @@
     height: auto;    
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding-block: var(--size-3);
   }

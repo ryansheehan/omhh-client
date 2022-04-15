@@ -199,10 +199,11 @@ export interface RelatedLink {
 }
 
 export interface PostRecipeListing {
-  name: string,
-  _id: string,
-  mainImage: ImageData,
-  slug: string,
+  name: string;
+  _id: string;
+  mainImage: ImageData;
+  description: string;
+  slug: string;
 }
 
 export interface TagListing {

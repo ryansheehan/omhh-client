@@ -1,12 +1,7 @@
-<script lang="ts" context="module">
-  export type Surface = '1' | '2' | '3' | '4';
+<script lang="ts">  
 </script>
 
-<script lang="ts">
-  export let surface: Surface = '1';
-</script>
-
-<section style="--surface: var(--surface-{surface});">
+<section>
   <div class="content">
     <slot/>
   </div>
@@ -14,7 +9,7 @@
 
 <style lang="postcss">
   section {
-    background-color: var(--surface);    
+    background-color: var(--surface, var(--surface-1));    
     padding-block: var(--size-4);
     min-inline-size: 100%;    
   }
