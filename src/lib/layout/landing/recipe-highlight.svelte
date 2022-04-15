@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { PostRecipeListing } from '$lib/api/sanity';
-  import Image from '$lib/components/sanity-image.svelte';
-  import HeartHeader from '$lib/components/heart-wrapper.svelte';
+  import Image from '$lib/components/sanity-image.svelte';  
 
   export let recipe: PostRecipeListing;
   const { 
@@ -12,13 +11,11 @@
   } = recipe;
 </script>
 
+
 <div class="layout">
   <div class="image-wrapper">
     <Image source={mainImage} />
-  </div>
-  <div class="section-title">
-    <HeartHeader><h2>Taste the Latest</h2></HeartHeader>
-  </div>
+  </div>  
   <h3>{name}</h3>
   <p>{description}</p>
   <a href={`recipes/${slug}`}>See Recipe</a>
@@ -26,12 +23,12 @@
 
 
 <style lang="postcss">
+  
   .layout {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
-    grid-template-areas: 
-      "sectionTitle"
+    grid-template-areas:       
       "image"
       "recipeTitle"
       "description"
@@ -39,36 +36,41 @@
     ;
     justify-items: stretch;
     text-align: center;
+    row-gap: var(--size-3);         
 
     & .image-wrapper {  
       width: 100%;    
-      grid-area: image;    
-    }
-
-    & .section-title {
-      grid-area: sectionTitle;
+      grid-area: image;      
     }
 
     & h3 {
       grid-area: recipeTitle; 
       line-height: var(--font-lineheight-0);     
+      padding-inline: var(--size-4);
+      max-inline-size: var(--size-content-2);
     }
 
     & p {
       grid-area: description;
       line-height: var(--font-lineheight-1);
+      padding-inline: var(--size-4);
+      max-inline-size: var(--size-content-2);
     }
 
     & a {
       grid-area: link;
       justify-self: center;
     }
+
+    @media (--sm-n-above) {
+      padding-inline: var(--size-4);
+    }
     
     @media (--md-n-above) {
+      padding-inline: 0;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr auto 1fr;
-      grid-template-areas:
-        "sectionTitle sectionTitle"
+      grid-template-rows: 1fr auto 1fr;
+      grid-template-areas:        
         "image recipeTitle"
         "image description"
         "image link"
@@ -77,7 +79,7 @@
       row-gap: var(--size-6);
 
       & h3 {
-        align-self: flex-end;
+        align-self: flex-end;        
       }
 
       & a {
@@ -85,15 +87,9 @@
       }
 
       & h3, & p {
-        padding-inline: var(--size-8);
+        padding-inline: 0;        
       }
     }    
-  }
-  
-  h2 {
-    color: var(--text-2);
-    text-transform: uppercase;
-    font-size: var(--font-size-fluid-1);
   }
 
   a {
@@ -105,8 +101,8 @@
     color: var(--text-1);
     border-radius: var(--radius-2);
 
-    &:hover {
-      background-color: var(--brand-dark);
+    &:hover, &:active {
+      background-color: var(--brand-hover);
       @media (--md-n-above) {
         text-decoration: underline;
       }

@@ -1,7 +1,6 @@
 @import "open-props/postcss/style";
 @import "open-props/postcss/normalize";
 
-
 /* 
 img, picture, video, canvas, svg {
   display: block;
@@ -63,14 +62,18 @@ body {
   --font-serif: Gentium Basic,ui-serif,serif;
   --font-mono: Dank Mono,Operator Mono,Inconsolata,Fira Mono,ui-monospace,SF Mono,Monaco,Droid Sans Mono,Source Code Pro,monospace;
 
-  --brand-light: var(--gray-4);
-  --brand-dark: var(--gray-7);
+  --brand-light: var(--gray-3);
+  --brand-light-hover: var(--gray-4);
+  --brand-dark: var(--gray-8);
+  --brand-dark-hover: var(--gray-7);
   --brand: var(--brand-light);
+  --brand-hover: var(--brand-light-hover);
 }
 
 @media (--OSdark) {
   :root {
     --brand: var(--brand-dark);
+    --brand-hover: var(--brand-dark-hover);
   }
 }
 

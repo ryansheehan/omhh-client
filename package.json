@@ -1,5 +1,5 @@
 {
-  "name": "food-data",
+  "name": "omhh-client",
   "version": "0.0.1",
   "scripts": {
     "start": "npm run dev -- --port=3000 --host",
