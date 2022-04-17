@@ -5,8 +5,7 @@ import { browser } from '$app/env';
 
 function createMediaStore(query: string) {  
   const store: Writable<boolean> = writable<boolean>(false, set => {
-    if (browser) {
-      console.log('here', query);
+    if (browser) {      
       const {set: setValue} = store;
       const mql = window.matchMedia(query);
       set(mql.matches);
@@ -32,7 +31,7 @@ function createMediaStore(query: string) {
 // export const xsPhone      = createMediaStore('(240px <= width <= 360px) and (orientation: portrait)');
 
 // export const smOnly       = createMediaStore('(360px <= width <= 480px)');
-// export const smAndAbove   = createMediaStore('(width >= 480px)');
+export const smAndAbove   = createMediaStore('(min-width: 480px)');
 // export const smAndBelow   = createMediaStore('(width <= 480px)');
 // export const smPhone      = createMediaStore('(360px <= width <= 480px) and (orientation: portrait)');
 

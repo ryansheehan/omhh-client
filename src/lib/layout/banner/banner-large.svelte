@@ -40,7 +40,7 @@
     padding-block: var(--size-3);
   }
 
-  @media screen and (--md-n-above) {
+  @media (--md-n-above) {
     .banner-large {
       display: flex;
     }

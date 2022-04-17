@@ -15,7 +15,7 @@
   }
 
   .content {
-    max-width: var(--size-lg);
+    max-width: var(--size-xl);
     margin-inline: auto;
   }
 </style>

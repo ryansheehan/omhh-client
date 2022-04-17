@@ -14,7 +14,7 @@
 
 <div class="layout">
   <div class="image-wrapper">
-    <Image source={mainImage} />
+    <Image source={mainImage} widths={[400]} sizes={['400px']} />
   </div>  
   <h3>{name}</h3>
   <p>{description}</p>
@@ -34,9 +34,9 @@
       "description"
       "link"
     ;
-    justify-items: stretch;
+    justify-items: center;
     text-align: center;
-    row-gap: var(--size-3);         
+    row-gap: var(--size-4);         
 
     & .image-wrapper {  
       width: 100%;    
@@ -46,15 +46,17 @@
     & h3 {
       grid-area: recipeTitle; 
       line-height: var(--font-lineheight-0);     
-      padding-inline: var(--size-4);
-      max-inline-size: var(--size-content-2);
+      max-inline-size: var(--size-15);
     }
 
     & p {
       grid-area: description;
-      line-height: var(--font-lineheight-1);
+      line-height: var(--font-lineheight-1);      
+      max-inline-size: var(--size-15);
+    }
+
+    & h3, & p {
       padding-inline: var(--size-4);
-      max-inline-size: var(--size-content-2);
     }
 
     & a {
@@ -68,15 +70,16 @@
     
     @media (--md-n-above) {
       padding-inline: 0;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: 1fr auto 1fr;
       grid-template-areas:        
         "image recipeTitle"
         "image description"
         "image link"
-      ;
-      column-gap: var(--size-4);
-      row-gap: var(--size-6);
+      ;      
+      column-gap: 0;
+      row-gap: var(--size-8);
+      max-block-size: 512px;
 
       & h3 {
         align-self: flex-end;        
@@ -84,10 +87,14 @@
 
       & a {
         align-self: flex-start;
+      }    
+      
+      & p {
+        text-overflow: ellipsis;
       }
 
       & h3, & p {
-        padding-inline: 0;        
+        padding-inline: 0;         
       }
     }    
   }

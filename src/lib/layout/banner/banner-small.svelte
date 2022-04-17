@@ -30,7 +30,7 @@
     width: fit-content;      
   } 
 
-  @media screen and (--md-n-above) {
+  @media (--md-n-above) {
     .banner-small {
       display: none;
     }
