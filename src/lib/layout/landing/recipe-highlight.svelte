@@ -14,7 +14,7 @@
 
 <div class="layout">
   <div class="image-wrapper">
-    <Image source={mainImage} widths={[400]} sizes={['400px']} />
+    <Image source={mainImage} widths={[600]} sizes={['600px']} />
   </div>  
   <h3>{name}</h3>
   <p>{description}</p>
@@ -40,7 +40,9 @@
 
     & .image-wrapper {  
       width: 100%;    
-      grid-area: image;      
+      grid-area: image;   
+      display: flex;
+      justify-content: center;
     }
 
     & h3 {
@@ -79,7 +81,7 @@
       ;      
       column-gap: 0;
       row-gap: var(--size-8);
-      max-block-size: 512px;
+      /* max-block-size: 512px; */
 
       & h3 {
         align-self: flex-end;        
@@ -96,7 +98,15 @@
       & h3, & p {
         padding-inline: 0;         
       }
-    }    
+
+      & .image-wrapper { 
+        justify-content: flex-start;
+      }
+    } 
+
+    @media (--xl-n-above) {
+      /* max-block-size: 720px; */
+    }
   }
 
   a {

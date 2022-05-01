@@ -28,8 +28,8 @@
 
 <style lang="postcss">
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    max-block-size: 100%;
+    max-inline-size: 100%;
+    object-fit: contain;    
   }
 </style>

@@ -69,6 +69,10 @@
       grid-template-columns: 1fr 1fr 1fr;            
     }
 
+    @media (--lg-n-above) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     @media (--xl-n-above) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
