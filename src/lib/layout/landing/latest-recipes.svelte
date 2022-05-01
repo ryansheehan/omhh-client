@@ -24,31 +24,30 @@
   <div class="section-title">
     <HeartWrapper><h2>Taste the Latest</h2></HeartWrapper>
   </div>
-  <div class="highlight">
-    <RecipeHighlight recipe={latestRecipe} />
-  </div>
-  <div class="gallery">
-    <Gallery {gallery} label="Latest Recipes"/>
+  <div class="content-layout">
+    <div class="highlight">
+      <RecipeHighlight recipe={latestRecipe} />
+    </div>
+    <div class="gallery">
+      <Gallery {gallery} label="Latest Recipes"/>
+    </div>
   </div>
 </Section>
 
 <style lang="postcss">
-  .section-title {
-    margin-block-end: var(--size-3); 
-
+  .section-title {    
     & h2 {
       color: var(--text-2);
       text-transform: uppercase;
       font-size: var(--font-size-fluid-1);
     }
-  }
+  }  
 
-  .gallery {
-    padding-inline: var(--size-4);
-  }
-
-  .highlight {
-    padding-block-end: var(--size-4);
+  .content-layout {
+    padding-top: var(--size-4);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--size-4);
     padding-inline: var(--size-4);
   }
 </style>
