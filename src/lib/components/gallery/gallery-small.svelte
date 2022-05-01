@@ -15,6 +15,7 @@
     perPage: 2,
     perMove: 1,
     gap: 'var(--size-2)',
+    // updateOnMove: true,
   }
 </script>
 
@@ -57,6 +58,7 @@
     align-items: center;
     gap: var(--size-fluid-2);
     min-inline-size: 100%;      
+    padding-block-start: var(--size-2);
   }
 
   :global(.splide__arrow) {

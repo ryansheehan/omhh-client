@@ -14,19 +14,22 @@
 
 <style lang="postcss">
   a {
-    /* display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center; */
-    /* max-block-size: 100%; */
     padding: 0;
     text-decoration-color: var(--text-2);
     text-decoration: none;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: var(--size-2);
   }
 
   p {
     text-align: center;
     font-size: var(--font-size-fluid-0);
-    color: var(--text-2);    
+    color: var(--text-2); 
+    height: 2.2em;
+    line-height: 1.1em;
+    overflow: hidden;   
   }
 </style>

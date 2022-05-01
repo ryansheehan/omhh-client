@@ -47,7 +47,7 @@ export const mdAndAbove = createMediaStore('(min-width: 768px)');
 // export const lgPhone      = createMediaStore('(768px <= width <= 1024px) and (orientation: portrait)');
 
 // export const xlOnly       = createMediaStore('(1024px <= width <= 1440px)');
-// export const xlAndAbove   = createMediaStore('(width >= 1440px)');
+export const xlAndAbove   = createMediaStore('(min-width: 1440px)');
 // export const xlAndBelow   = createMediaStore('(width <= 1440px)');
 
 // export const xxlOnly      = createMediaStore('(1440px <= width <= 1920px)');
